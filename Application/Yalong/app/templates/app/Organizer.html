@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+ {%for Organizer in Organizer_List %}
+     <div class="Organizer-entry">
+        <h2><a href="">{{Organizer.Name}}</a>
+     </div>
+{%endfor %}
+{% endblock content %}

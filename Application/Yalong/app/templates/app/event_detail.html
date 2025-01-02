@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% block content %}
+  <h1>{{ event.Event_Name }}</h1>
+  <p>{{ event.Description }}</p>
+  <p>Date: {{ event.Date }}</p>
+  <p>Time: {{ event.Time }}</p>
+  <p>Location: {{ event.Location }}</p>
+  <p>Category: {{ event.Category }}</p>
+  <p>Status: {{ event.Status }}</p>
+  <p>Organizer: {{ event.OrganizerID }}</p>
+  <p>Budget: ₱{{ event.Budget }}</p>
+  <a href="{% url 'event_update' event.pk %}">Edit</a>
+  <a href="{% url 'event_delete' event.pk %}">Delete</a>
+  <a href="{% url 'Event' %}">Back to Event List</a>
+{% endblock %}
